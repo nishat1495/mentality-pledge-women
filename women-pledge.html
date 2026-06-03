@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nigerian Women's Pledge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root,[data-theme="light"]{
+  --bg:#f5f0e8;--surface:#fdf9f4;--surface-off:#ede8df;
+  --border:#c8c0b2;--divider:#d8d0c4;
+  --text:#1a1610;--muted:#6b6256;--faint:#a89e90;--inverse:#f5f0e8;
+  --primary:#7a3b6e;--primary-h:#5c2952;--primary-hi:#f0d8ec;
+  --accent:#1a3a2a;--accent-l:#2d6148;
+  --sh-sm:0 1px 3px rgba(0,0,0,.08);--sh-md:0 4px 16px rgba(0,0,0,.10);--sh-lg:0 16px 48px rgba(0,0,0,.13);
+  --r-sm:.375rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;--r-2xl:1.5rem;--r-full:9999px;
+  --tr:200ms cubic-bezier(.16,1,.3,1);
+  --fd:"Instrument Serif",Georgia,serif;--fb:"DM Sans",system-ui,sans-serif;
+  --xs:clamp(.75rem,.7rem + .25vw,.875rem);--sm:clamp(.875rem,.8rem + .35vw,1rem);
+  --base:clamp(1rem,.95rem + .25vw,1.125rem);--lg:clamp(1.125rem,1rem + .75vw,1.5rem);
+  --xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+}
+[data-theme="dark"]{
+  --bg:#0f0d0a;--surface:#1a1814;--surface-off:#1f1c18;
+  --border:#332f28;--divider:#2a261f;
+  --text:#e8e0d4;--muted:#8c8070;--faint:#5a5248;--inverse:#0f0d0a;
+  --primary:#c46cb8;--primary-h:#d880cc;--primary-hi:#3a1a35;
+  --accent:#4a9a70;--accent-l:#6ab888;
+  --sh-sm:0 1px 3px rgba(0,0,0,.3);--sh-md:0 4px 16px rgba(0,0,0,.4);--sh-lg:0 16px 48px rgba(0,0,0,.55);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{min-height:100dvh;font-family:var(--fb);font-size:var(--base);color:var(--text);background:var(--bg);line-height:1.65}
+button{cursor:pointer;background:none;border:none;font:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--fd);line-height:1.15}
+a,button{transition:color var(--tr),background var(--tr),border-color var(--tr),box-shadow var(--tr),opacity var(--tr),transform var(--tr)}
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:var(--r-sm)}
+.page{max-width:680px;margin-inline:auto;padding:clamp(1.5rem,5vw,3rem) clamp(1rem,4vw,2rem)}
+.hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.5rem}
+.logo{display:flex;align-items:center;gap:.625rem}
+.logo-txt{font-family:var(--fd);font-size:1.15rem;letter-spacing:-.01em;line-height:1.1}
+.logo-txt span{display:block;font-size:.7rem;font-family:var(--fb);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.tbtn{padding:.5rem;border-radius:var(--r-full);color:var(--muted);display:flex}
+.tbtn:hover{color:var(--text);background:var(--surface-off)}
+.intro{margin-bottom:2rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.4rem;background:var(--primary-hi);color:var(--primary);padding:.3rem .8rem;border-radius:var(--r-full);font-size:var(--xs);font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:1rem}
+.intro h1{font-size:var(--2xl);margin-bottom:.75rem;line-height:1.1}
+.intro h1 em{font-style:italic;color:var(--primary)}
+.intro p{font-size:var(--base);color:var(--muted);max-width:56ch;line-height:1.7}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-2xl);padding:clamp(1.5rem,5vw,2.5rem);box-shadow:var(--sh-md);margin-bottom:1.5rem}
+.card-title{font-family:var(--fd);font-size:var(--lg);margin-bottom:1.25rem}
+.card-title em{font-style:italic;color:var(--primary)}
+.plist{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.75rem}
+.pitem label{display:flex;gap:.875rem;cursor:pointer;padding:.875rem 1rem;border-radius:var(--r-lg);border:1.5px solid var(--border);background:var(--bg);align-items:flex-start;line-height:1.7;font-size:var(--sm)}
+.pitem label span{display:block;padding-top:1px}
+.pitem input[type=checkbox]{appearance:none;-webkit-appearance:none;width:20px;height:20px;min-width:20px;border:2px solid var(--border);border-radius:5px;margin-top:1px;display:grid;place-content:center;background:var(--bg);transition:background var(--tr),border-color var(--tr)}
+.pitem input[type=checkbox]:checked{background:var(--primary);border-color:var(--primary)}
+.pitem input[type=checkbox]:checked::after{content:"";width:5px;height:9px;border:2px solid #fff;border-top:none;border-left:none;transform:rotate(42deg) translate(-1px,-1px)}
+.pitem:has(input:checked) label{border-color:var(--primary);background:var(--primary-hi)}
+.name-row{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.25rem}
+.name-row label{font-size:var(--sm);font-weight:600;color:var(--muted)}
+.name-in{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:var(--r-lg);background:var(--bg);color:var(--text);font-size:var(--base);font-family:var(--fb)}
+.name-in:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 15%,transparent)}
+.name-in::placeholder{color:var(--faint)}
+.sub-btn{width:100%;background:var(--primary);color:#fff;padding:.875rem 1.5rem;border-radius:var(--r-full);font-weight:700;font-size:var(--base);display:flex;align-items:center;justify-content:center;gap:.5rem;box-shadow:var(--sh-sm)}
+.sub-btn:hover:not(:disabled){background:var(--primary-h);transform:translateY(-1px);box-shadow:var(--sh-md)}
+.sub-btn:disabled{opacity:.38;cursor:not-allowed}
+.success{display:none;text-align:center;padding:1.5rem 0}
+.s-icon{width:56px;height:56px;background:var(--accent);border-radius:var(--r-full);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;color:#fff}
+[data-theme="dark"] .s-icon{background:var(--accent-l)}
+.success h2{font-size:var(--xl);margin-bottom:.6rem}
+.success h2 em{font-style:italic;color:var(--primary)}
+.success p{color:var(--muted);max-width:44ch;margin-inline:auto;font-size:var(--sm);line-height:1.65}
+.preview-wrap{margin-top:1.75rem}
+.preview-lbl{font-size:var(--xs);font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+.cv-wrap{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-lg);margin-bottom:1.25rem}
+canvas{display:block;width:100%;height:auto}
+.dl-btn{width:100%;background:var(--accent);color:#fff;padding:.875rem 1.5rem;border-radius:var(--r-full);font-weight:700;font-size:var(--base);display:flex;align-items:center;justify-content:center;gap:.5rem;box-shadow:var(--sh-sm)}
+[data-theme="dark"] .dl-btn{background:var(--accent-l)}
+.dl-btn:hover{opacity:.88;transform:translateY(-1px);box-shadow:var(--sh-md)}
+.rct-hidden{display:none}
+footer{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--divider);text-align:center}
+footer p{font-size:var(--xs);color:var(--faint)}
+@media(max-width:480px){
+  .hdr{margin-bottom:1.5rem}
+  .card{padding:1.25rem}
+  .pitem label{padding:.75rem .875rem}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="hdr">
+  <div class="logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-label="Supporting positive change · Nigeria">
+      <rect width="36" height="36" rx="8" fill="var(--primary)"/>
+      <circle cx="18" cy="15" r="6" stroke="white" stroke-width="2" fill="none"/>
+      <line x1="18" y1="21" x2="18" y2="28" stroke="white" stroke-width="2"/>
+      <line x1="14" y1="25" x2="22" y2="25" stroke="white" stroke-width="2"/>
+    </svg>
+    <div class="logo-txt">Supporting positive change<span>Nigeria</span></div>
+  </div>
+  <button class="tbtn" data-theme-toggle aria-label="Toggle theme">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  </button>
+</header>
+<div class="intro">
+  <div class="eyebrow">🤝 Positive Masculinity Initiative</div>
+  <h1>Your pledge.<br><em>Your commitment.</em></h1>
+  <p>Change starts close to home. Choose the commitments you're ready to keep and receive your personal pledge card.</p>
+</div>
+<div class="card">
+  <div id="form-state">
+    <p class="card-title">I, as a Nigerian woman, commit to…</p>
+    <ul class="plist">
+      <li class="pitem">
+        <label>
+          <input type="checkbox" name="pledge" value="encouraging">
+          <span><strong>Encouraging</strong> the men and boys in my life to express their feelings openly — and listening without judgement when they do</span>
+        </label>
+      </li>
+      <li class="pitem">
+        <label>
+          <input type="checkbox" name="pledge" value="challenging">
+          <span><strong>Challenging</strong> ideas in my community that shame men for showing vulnerability or seeking help</span>
+        </label>
+      </li>
+      <li class="pitem">
+        <label>
+          <input type="checkbox" name="pledge" value="modelling">
+          <span><strong>Modelling</strong> equal partnerships in my home and relationships — and expecting the same respect in return</span>
+        </label>
+      </li>
+    </ul>
+    <div class="name-row">
+      <label for="pname">Your first name</label>
+      <input type="text" id="pname" class="name-in" placeholder="e.g. Adaeze" maxlength="40" autocomplete="given-name">
+    </div>
+    <button class="sub-btn" id="sub-btn" disabled>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      Sign My Pledge
+    </button>
+  </div>
+  <div class="success" id="success-state">
+    <div class="s-icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2>Thank you, <em id="name-display">sister</em>.</h2>
+    <p>Your pledge card is ready. Save it as a daily reminder of the change you're committed to making.</p>
+    <div class="preview-wrap">
+      <p class="preview-lbl">Your pledge card</p>
+      <div class="cv-wrap"><canvas id="pledge-canvas" width="1080" height="600" aria-label="Your pledge card"></canvas></div>
+      <button class="dl-btn" id="dl-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download My Pledge Card
+      </button>
+    </div>
+  </div>
+</div>
+<div class="rct-hidden" aria-hidden="true">
+  <input type="hidden" id="rct-taken" value="0">
+  <input type="hidden" id="rct-items" value="">
+  <input type="hidden" id="rct-count" value="0">
+  <input type="hidden" id="rct-ts" value="">
+</div>
+<canvas id="pledge-canvas-full" width="1080" height="600" style="display:none"></canvas>
+<footer><p>Supporting positive change · Nigeria</p></footer>
+</div>
+<script>
+(function(){
+  var t=document.querySelector("[data-theme-toggle]"),r=document.documentElement;
+  var d=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";
+  r.setAttribute("data-theme",d);
+  if(t)t.addEventListener("click",function(){d=d==="dark"?"light":"dark";r.setAttribute("data-theme",d);});
+})();
+var nameIn=document.getElementById("pname");
+var subBtn=document.getElementById("sub-btn");
+var cbs=document.querySelectorAll("input[name='pledge']");
+function checkState(){subBtn.disabled=!(nameIn.value.trim().length>=2&&Array.from(cbs).some(function(c){return c.checked;}));}
+nameIn.addEventListener("input",checkState);
+cbs.forEach(function(c){c.addEventListener("change",checkState);});
+subBtn.addEventListener("click",function(){
+  var name=nameIn.value.trim();
+  var chosen=Array.from(cbs).filter(function(c){return c.checked;}).map(function(c){return c.value;});
+  if(!name||!chosen.length)return;
+  document.getElementById("rct-taken").value="1";
+  document.getElementById("rct-items").value=chosen.join(",");
+  document.getElementById("rct-count").value=chosen.length;
+  document.getElementById("rct-ts").value=new Date().toISOString();
+  var payload={type:"women_pledge",pledge_taken:"1",pledge_items:chosen.join(","),pledge_count:chosen.length,name:name,ts:new Date().toISOString()};
+  if(window.parent&&window.parent!==window){window.parent.postMessage(payload,"*");}
+  var SHEET_URL="https://script.google.com/macros/s/AKfycbzpKdVMFqj8bQIxfg_bdJQUCaxjOeyg-zQpW8boYtdMAzXr4tCvhjXQ3tg-XM7PsrH9/exec";
+  logToSheet(SHEET_URL, getTS(), name, chosen.join(", "), chosen.length, getPid(), "not downloaded");
+  if(typeof Qualtrics!=="undefined"&&Qualtrics.SurveyEngine){
+    try{Qualtrics.SurveyEngine.addEmbeddedData("pledge_taken","1");}catch(e){}
+    try{Qualtrics.SurveyEngine.addEmbeddedData("pledge_items",chosen.join(","));}catch(e){}
+    try{Qualtrics.SurveyEngine.addEmbeddedData("pledge_count",String(chosen.length));}catch(e){}
+  }
+  document.getElementById("form-state").style.display="none";
+  var ss=document.getElementById("success-state");
+  ss.style.display="block";
+  document.getElementById("name-display").textContent=name;
+  var lmap={
+    encouraging:"Encourage the men and boys in my life to express feelings openly",
+    challenging:"Challenge ideas that shame men for vulnerability or seeking help",
+    modelling:"Model equal partnerships and expect the same respect in return"
+  };
+  setTimeout(function(){renderCard(name,chosen.map(function(v){return lmap[v]||v;}));},80);
+});
+function renderCard(name,lines){
+  var fc=document.getElementById("pledge-canvas-full");
+  var dc=document.getElementById("pledge-canvas");
+  var ctx=fc.getContext("2d");
+  var W=1080,H=600;
+  ctx.clearRect(0,0,W,H);
+  var dark=document.documentElement.getAttribute("data-theme")==="dark";
+  var bg=dark?"#1a1814":"#fdf9f4";
+  var tx=dark?"#e8e0d4":"#1a1610";
+  var mu=dark?"#8c8070":"#6b6256";
+  var fa=dark?"#5a5248":"#a89e90";
+  var pr=dark?"#c46cb8":"#7a3b6e";
+  var gr=dark?"#4a9a70":"#1a3a2a";
+  var bo=dark?"#332f28":"#c8c0b2";
+  ctx.fillStyle=bg;rr(ctx,0,0,W,H,24);ctx.fill();
+  ctx.fillStyle=pr;ctx.fillRect(0,0,8,H);
+  ctx.beginPath();ctx.arc(W-60,60,120,0,Math.PI*2);ctx.fillStyle=pr;ctx.globalAlpha=.05;ctx.fill();ctx.globalAlpha=1;
+  ctx.beginPath();ctx.arc(80,H-80,90,0,Math.PI*2);ctx.fillStyle=gr;ctx.globalAlpha=.06;ctx.fill();ctx.globalAlpha=1;
+  ctx.strokeStyle=bo;ctx.lineWidth=1.5;rr(ctx,1,1,W-2,H-2,23);ctx.stroke();
+  var lx=60,ty=56;
+  // Logo circle
+  ctx.fillStyle=pr;ctx.beginPath();ctx.arc(lx+20,ty+20,20,0,Math.PI*2);ctx.fill();
+  // Person icon in logo
+  ctx.strokeStyle="#fff";ctx.lineWidth=1.8;
+  ctx.beginPath();ctx.arc(lx+20,ty+14,5,0,Math.PI*2);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(lx+20,ty+19);ctx.lineTo(lx+20,ty+26);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(lx+14,ty+31);ctx.lineTo(lx+20,ty+26);ctx.lineTo(lx+26,ty+31);ctx.stroke();
+  ctx.textAlign="left";ctx.textBaseline="alphabetic";
+  ctx.fillStyle=tx;ctx.font="italic 22px Georgia,serif";ctx.fillText("Supporting positive change",lx+48,ty+16);
+  ctx.fillStyle=mu;ctx.font="500 11px sans-serif";ctx.fillText("NIGERIA",lx+48,ty+33);
+  ctx.strokeStyle=bo;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(lx,ty+54);ctx.lineTo(lx+420,ty+54);ctx.stroke();
+  ctx.fillStyle=tx;ctx.font="italic 58px Georgia,serif";ctx.fillText("I Pledge.",lx,ty+124);
+  ctx.fillStyle=pr;ctx.font="700 22px sans-serif";ctx.fillText(name.toUpperCase(),lx,ty+158);
+  ctx.fillStyle=mu;ctx.font="16px sans-serif";ctx.fillText("Nigerian Women's Pledge",lx,ty+186);
+  var iy=ty+226;
+  var max=Math.min(lines.length,6);
+  for(var i=0;i<max;i++){
+    ctx.fillStyle=gr;ctx.beginPath();ctx.arc(lx+8,iy-5,8,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle="#fff";ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(lx+4,iy-5);ctx.lineTo(lx+7,iy-2);ctx.lineTo(lx+13,iy-9);ctx.stroke();
+    ctx.fillStyle=tx;ctx.font="500 13.5px sans-serif";
+    var ln=lines[i];if(ln.length>62)ln=ln.substring(0,60)+"\u2026";
+    ctx.fillText(ln,lx+24,iy);iy+=30;
+  }
+  var rx=640,ry=56,bw=W-rx-56,bh=H-ry-56;
+  ctx.fillStyle=dark?"#221f1a":"#f5f0e8";rr(ctx,rx,ry,bw,bh,16);ctx.fill();
+  ctx.strokeStyle=bo;ctx.lineWidth=1;rr(ctx,rx,ry,bw,bh,16);ctx.stroke();
+  var cx2=rx+bw/2,cy2=ry+bh/2-20;
+  ctx.beginPath();ctx.arc(cx2,cy2,100,0,Math.PI*2);ctx.strokeStyle=pr;ctx.globalAlpha=.18;ctx.lineWidth=12;ctx.stroke();ctx.globalAlpha=1;
+  ctx.beginPath();ctx.arc(cx2,cy2,80,0,Math.PI*2);ctx.strokeStyle=pr;ctx.lineWidth=2.5;ctx.stroke();
+  ctx.beginPath();ctx.arc(cx2,cy2,78,0,Math.PI*2);ctx.fillStyle=pr;ctx.globalAlpha=.08;ctx.fill();ctx.globalAlpha=1;
+  ctx.save();ctx.translate(cx2,cy2);
+  ctx.font="bold 10.5px sans-serif";ctx.fillStyle=pr;ctx.textAlign="center";ctx.textBaseline="middle";
+  var arc="\u2022  WOMEN\u2019S PLEDGE  \u2022  NIGERIA  \u2022";
+  var as=(2*Math.PI)/(arc.length*1.4),sa=-Math.PI/2;
+  for(var j=0;j<arc.length;j++){var ang=sa+j*as;ctx.save();ctx.rotate(ang);ctx.translate(0,-70);ctx.rotate(Math.PI/2);ctx.fillText(arc[j],0,0);ctx.restore();}
+  ctx.restore();
+  // Heart icon in centre circle
+  ctx.fillStyle=pr;ctx.font="bold italic 38px Georgia,serif";ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText("\u2764",cx2,cy2);
+  ctx.font="600 11px sans-serif";ctx.fillStyle=mu;ctx.fillText("SIGNED",cx2,ry+bh-86);
+  ctx.fillStyle=tx;ctx.font="italic bold 19px Georgia,serif";ctx.fillText(name,cx2,ry+bh-64);
+  ctx.strokeStyle=bo;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(cx2-60,ry+bh-48);ctx.lineTo(cx2+60,ry+bh-48);ctx.stroke();
+  var ds=new Date().toLocaleDateString("en-NG",{year:"numeric",month:"long",day:"numeric"});
+  ctx.font="500 11px sans-serif";ctx.fillStyle=fa;ctx.fillText(ds,cx2,ry+bh-32);
+  ctx.textAlign="left";ctx.textBaseline="alphabetic";
+  dc.width=W;dc.height=H;dc.getContext("2d").drawImage(fc,0,0);
+}
+function rr(ctx,x,y,w,h,r){
+  ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+  ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+  ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);
+  ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();
+}
+document.getElementById("dl-btn").addEventListener("click",function(){
+  var fc=document.getElementById("pledge-canvas-full");
+  var nm=document.getElementById("pname").value.trim()||"pledge";
+  fc.toBlob(function(blob){
+    var a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="WomensPledge-"+nm.replace(/\s+/g,"-")+".png";
+    a.click();URL.revokeObjectURL(a.href);
+  },"image/png");
+  var SHEET_URL_DL="https://script.google.com/macros/s/AKfycbzpKdVMFqj8bQIxfg_bdJQUCaxjOeyg-zQpW8boYtdMAzXr4tCvhjXQ3tg-XM7PsrH9/exec";
+  logToSheet(SHEET_URL_DL, getTS(), nm, "[DOWNLOAD]", "download", getPid(), "downloaded");
+});
+function logToSheet(sheetUrl, timestamp, name, items, count, pid, download_status) {
+  var params = new URLSearchParams();
+  params.append("timestamp", timestamp);
+  params.append("name", name);
+  params.append("items", items);
+  params.append("count", String(count));
+  params.append("participant_id", pid);
+  params.append("download_status", download_status || "not downloaded");
+  fetch(sheetUrl, {
+    method: "POST",
+    mode: "no-cors",
+    body: params
+  }).catch(function(err){ console.warn("Log failed:", err); });
+}
+function getPid() {
+  var p = new URLSearchParams(window.location.search);
+  return p.get("uid") || p.get("pid") || p.get("participant_id") || p.get("RID") || p.get("respondent_id") || "unknown";
+}
+function getTS() {
+  return new Date().toLocaleString("en-NG", {timeZone:"Africa/Lagos",year:"numeric",month:"long",day:"numeric",hour:"2-digit",minute:"2-digit"});
+}
+</script>
+</body>
+</html>
